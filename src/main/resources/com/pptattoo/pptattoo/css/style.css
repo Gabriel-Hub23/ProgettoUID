@@ -1,0 +1,423 @@
+* {
+    -fx-text-fill: primaryTextColor;
+    -fx-background-radius: 10px;
+}
+
+.txt {
+    -fx-fill: primaryTextColor;
+    -fx-background-color: primaryTextColor;
+}
+
+.external-pane {
+    -fx-background-color: primaryBackgroundColor;
+    -fx-background-radius: 0px;
+}
+
+.external-pane:header *.header-panel {
+    -fx-background-color: secondaryBackgroundColor;
+    -fx-background-radius: 0px 0px 8px 8px;
+}
+
+.container-level-2 {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.dialog-pane .button-bar .button:default {
+    -fx-background-color: primaryBackgroundButtonColor;
+    -fx-background-radius: 30px;
+}
+
+.dialog-pane .button-bar .button:default:hover {
+    -fx-background-color: blueLight;
+}
+
+.dialog-pane .button-bar .button:cancel {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+.dialog-pane .button-bar .button:cancel:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+.primaryButton {
+    -fx-background-color: primaryBackgroundButtonColor;
+    -fx-background-radius: 30px;
+}
+
+.primaryButton:hover {
+    -fx-background-color: blueLight;
+}
+
+/* Dashboard */
+.dashboard-section {
+    -fx-background-color: #43004a; /* Verde brillante */
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-text-fill: #FFFFFF; /* Testo bianco */
+}
+
+.dashboard-section:hover {
+    -fx-background-color: #43004a; /* Verde scuro al passaggio */
+}
+
+/* Statistiche */
+.statistics-section {
+    -fx-background-color: #43004a; /* Verde brillante */
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-text-fill: #FFFFFF; /* Testo bianco */
+}
+
+.statistics-section:hover {
+    -fx-background-color: #43004a; /* Verde scuro al passaggio */
+}
+
+.loginField,
+.generalField {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+.sidebar {
+    -fx-background-color: secondaryBackgroundColor;
+    -fx-background-radius: 0px 10px 10px 0px;
+}
+
+.sidebar-button {
+    -fx-background-color: fifthBackgroundColor;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: sixthBackgroundColor;
+}
+
+.sidebar-logout-button {
+    -fx-background-color: fifthBackgroundColor;
+    -fx-text-fill: systemRed;
+}
+
+.sidebar-logout-button:hover {
+    -fx-background-color: sixthBackgroundColor;
+}
+
+.primary-app-view {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.imagePainContainer {
+    -fx-background-color: blueLight;
+}
+
+.secondaryButton {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+.secondaryButton:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+.thirdButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+}
+
+.thirdButton:hover {
+    -fx-background-color: fifthBackgroundColor;
+}
+
+#addButton {
+    -fx-background-color: systemBlue;
+}
+
+#addButton:hover {
+    -fx-background-color: blueLight;
+}
+
+#removeButton {
+    -fx-text-fill: systemRed;
+}
+
+#removeButton:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+#editButton {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+#editButton:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+    -fx-border-radius: 0px;
+    -fx-background-border: 0px;
+    -fx-border-color: primaryBackgroundColor;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: thirdBackgroundColor;
+    -fx-background-radius: 10px 10px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF; /* Testo bianco per la legenda */
+}
+
+.chart-bar {
+    -fx-bar-fill: #43004a; /* Verde per le barre */
+}
+
+.chart-series-line {
+    -fx-stroke: #43004a; /* Verde per le linee */
+    -fx-background-color: #43004a; /* Colore dei punti */
+}
+
+.chart-legend-item-symbol {
+    -fx-background-color: #b303cd; /* Verde per i simboli nella legenda */
+}
+
+.axis {
+    -fx-tick-label-fill: #FFFFFF; /* Testo bianco per i numeri delle assi */
+    -fx-label-fill: #FFFFFF; /* Testo bianco per i nomi delle assi */
+}
+
+.axis-line {
+    -fx-stroke: #AAAAAA; /* Grigio chiaro per le linee delle assi */
+}
+
+.chart-grid-lines {
+    -fx-stroke: #555555; /* Grigio scuro per le linee di griglia */
+}
+
+.bar-chart .chart-content .chart-plot-background {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+.axis {
+    -fx-text-background-color: primaryTextColor;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: sixthBackgroundColor;
+    -fx-text-background-color: primaryTextColor;
+}
+
+.table-row-cell:odd {
+    -fx-background-radius: 0px;
+    -fx-background-color: fifthBackgroundColor;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:even {
+    -fx-background-radius: 0px;
+    -fx-background-color: fourthBackgroundColor;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to bottom, fifthBackgroundColor, fourthBackgroundColor);
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color: linear-gradient(to right, fifthBackgroundColor, fourthBackgroundColor);
+}
+
+.table-row-cell:hover {
+    -fx-background-color: sixthBackgroundColor;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: systemBlue;
+}
+
+.table-cell .text-field {
+    -fx-background-color: thirdBackgroundColor;
+    -fx-background-radius: 8px;
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: sixthBackgroundColor;
+    -fx-margin: 0px 0px 0px 10px;
+}
+
+.table-view .show-hide-columns-button .context-menu .show-hide-column-image {
+    -fx-background-color: white;
+}
+
+.table-view .show-hide-columns-button .context-menu {
+    -fx-background-color: sixthBackgroundColor;
+}
+
+.searchField {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+.searchField:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+.combo-box {
+    -fx-background-color: thirdBackgroundColor;
+}
+
+.combo-box-popup .list-view {
+    -fx-control-inner-background: thirdBackgroundColor;
+}
+
+#search_hbox {
+    -fx-background-color: thirdBackgroundColor;
+    -fx-background-radius: 25px;
+}
+
+#search_hbox > * {
+    -fx-background-color: transparent;
+    -fx-background-radius: 25px;
+}
+
+#search_hbox > *:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+.errors-label {
+    -fx-text-fill: systemRed;
+}
+
+.card-info {
+    -fx-background-color: thirdBackgroundColor;
+    -fx-background-radius: 25px;
+}
+
+.card-info:hover {
+    -fx-background-color: fourthBackgroundColor;
+}
+
+.scroll-pane > .viewport,
+.scroll-pane {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to bottom, fifthBackgroundColor, fourthBackgroundColor);
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
+
+
+
+
+
+
+.sidebar-button {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #43004a;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #b303cd;
+}
+
+.sidebar-logout-button {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #910000;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.sidebar-logout-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stile per il pulsante attivo */
+.active-button {
+    -fx-background-color: #6c0073; /* Colore evidenziato */
+    -fx-text-fill: white; /* Testo bianco */
+    -fx-font-weight: bold; /* Testo in grassetto */
+    -fx-border-color: white; /* Bordo bianco */
+    -fx-border-width: 2px; /* Spessore del bordo */
+    -fx-border-radius: 5px; /* Bordo arrotondato */
+    -fx-background-radius: 5px; /* Sfondo arrotondato */
+}
+
+
+

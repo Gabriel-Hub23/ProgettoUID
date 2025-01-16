@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" styleClass="external-pane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pptattoo.pptattoo.Controller.LoginController">
+   <children>
+      <Pane fx:id="pane" layoutX="190.0" layoutY="64.0" maxHeight="600" maxWidth="500" minHeight="343.0" minWidth="253.0" prefHeight="417.0" prefWidth="253.0" styleClass="container-level-2">
+         <children>
+            <VBox alignment="CENTER" prefHeight="417.0" prefWidth="253.0" spacing="20.0" style="-fx-padding: 20;">
+               <children>
+                  <AnchorPane fx:id="ancorpane">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="loginLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="159.0" text="Login" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="usernameLabel" prefHeight="18.0" prefWidth="69.0" text="Username" />
+                  <TextField fx:id="usernameField" prefHeight="35.0" prefWidth="214.0" promptText="Username" styleClass="loginField" />
+                  <Label fx:id="passwordLabel" prefHeight="18.0" prefWidth="58.0" text="Password" />
+                  <HBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <PasswordField fx:id="passwordField" prefHeight="38.0" prefWidth="206.0" promptText="Password" styleClass="loginField" />
+                        <TextField fx:id="textPasswordField" managed="false" prefHeight="38.0" prefWidth="206.0" promptText="Password" styleClass="loginField" visible="false" />
+                        <Button fx:id="togglePasswordButton" onAction="#togglePasswordVisibility" style="-fx-background-color: transparent; -fx-pref-width: 38px; -fx-pref-height: 38px;">
+                           <graphic>
+                              <ImageView fitHeight="16" fitWidth="16">
+                                 <Image url="@../img/eye.png" />
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <AnchorPane>
+                     <children>
+                        <Button fx:id="accediButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#accedi" prefHeight="37.0" prefWidth="163.0" styleClass="primaryButton" text="Accedi" textAlignment="CENTER" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

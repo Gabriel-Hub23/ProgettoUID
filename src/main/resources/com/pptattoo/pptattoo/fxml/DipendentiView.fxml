@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pptattoo.pptattoo.Controller.DipendentiViewController">
+    <children>
+        <HBox layoutX="430.0" layoutY="68.0" spacing="4.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+            <children>
+                <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" onAction="#actionAddButton" styleClass="secondaryButton" text="Aggiungi" />
+            </children>
+        </HBox>
+        <Label fx:id="labelDipendenti" layoutX="19.0" layoutY="8.0" prefHeight="43.0" prefWidth="563.0" text="Dipendenti" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+        <HBox fx:id="search_hbox" alignment="BASELINE_CENTER" layoutX="15.0" layoutY="68.0" spacing="4.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="75.0">
+            <children>
+                <ComboBox fx:id="filtroBox" onAction="#actionFiltroBox" promptText="Filtra" styleClass="secondaryButton" />
+                <TextField fx:id="cercaField" promptText="cerca" styleClass="searchField" />
+                <Button fx:id="searchButton" defaultButton="true" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#actionSearchButton" styleClass="secondaryButton" text="Cerca" />
+            </children>
+        </HBox>
+        <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" layoutX="15.0" layoutY="122.0" pannable="true" styleClass="vbox-info" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="122.0">
+            <content>
+                <VBox fx:id="vboxEsterno" alignment="TOP_CENTER" prefHeight="294.0" prefWidth="563.0" styleClass="vbox-info">
+                    <opaqueInsets>
+                        <Insets bottom="5.0" top="5.0" />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets bottom="15.0" />
+                    </padding></VBox>
+            </content>
+            <opaqueInsets>
+                <Insets bottom="5.0" top="5.0" />
+            </opaqueInsets>
+        </ScrollPane>
+    </children>
+</AnchorPane>

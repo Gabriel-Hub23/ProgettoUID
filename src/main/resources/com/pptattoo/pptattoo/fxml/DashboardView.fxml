@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane cacheShape="false" centerShape="false" focusTraversable="true" onMouseMoved="#avviaNotifica" prefHeight="747.0" prefWidth="714.0" scaleShape="false" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pptattoo.pptattoo.Controller.DashboardController">
+   <children>
+      <Label fx:id="labelDashboard" layoutX="14.0" layoutY="10.0" prefHeight="34.0" prefWidth="364.0" text="Dashboard" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableGiornliera" editable="true" layoutX="14.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="651.0" styleClass="container-level-2" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="323.0">
+         <columns>
+            <TableColumn fx:id="colonnaId" prefWidth="42.5" text="Id" />
+            <TableColumn fx:id="colonnaEmail" prefWidth="112.0" text="Email" />
+            <TableColumn fx:id="colonnaNomeCognome" prefWidth="142.5" text="Nome e Cognome" />
+            <TableColumn fx:id="colonnaNumero" minWidth="1.0" prefWidth="75.0" text="Numero" />
+            <TableColumn fx:id="colonnaData" prefWidth="89.0" text="Data" />
+            <TableColumn fx:id="colonnaDipendente" prefWidth="104.0" text="Dipendente" />
+            <TableColumn fx:id="colonnaServizio" prefWidth="94.0" text="Servizio" />
+            <TableColumn fx:id="colonnaPrezzo" prefWidth="94.0" text="Prezzo" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <BarChart fx:id="chartGiornaliero" layoutX="10.0" layoutY="59.0" prefHeight="252.0" prefWidth="320.0" title="Giornaliero" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <VBox layoutX="346.0" layoutY="76.0" prefHeight="110.0" prefWidth="232.0" spacing="20.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label fx:id="labelDati" prefHeight="34.0" prefWidth="269.0" text="Dati:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <HBox spacing="10.0">
+               <children>
+                  <Text fx:id="txtNumero" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Appuntamenti:" wrappingWidth="169.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtNumeroCalcolare" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" wrappingWidth="63.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Text fx:id="txtGuadagno" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Guadagno previsto:" wrappingWidth="202.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtGuadagnoCalcolare" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" wrappingWidth="60.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

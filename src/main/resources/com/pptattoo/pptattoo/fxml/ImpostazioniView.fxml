@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ancorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pptattoo.pptattoo.Controller.ImpostazioniController">
+   <children>
+      <ComboBox fx:id="temiComboBox" layoutX="500.0" layoutY="130.0" onAction="#scegliTema" prefHeight="24.0" prefWidth="132.0" promptText="Scegli Tema" styleClass="primaryButton" visibleRowCount="5" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="145.0" />
+      <CheckBox fx:id="checkDislessia" layoutX="614.0" layoutY="256.0" mnemonicParsing="false" onAction="#attivaDislessia" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+      <HBox layoutX="633.0" layoutY="431.0" AnchorPane.rightAnchor="15.0" />
+      <Label fx:id="labelDislessia" layoutX="10.0" layoutY="200.0" prefHeight="35.0" prefWidth="460.0" text="Carattere per la dislessia" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtDislessia" layoutX="25.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Carattere adatto per le persone con dislessia." wrappingWidth="618.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="labelTemi" layoutX="10.0" layoutY="100.0" prefHeight="35.0" prefWidth="411.0" text="Scegli il tema dell'app" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtTemi" layoutX="25.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Ti permette di scegliere tra i temi dell'app." wrappingWidth="618.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="labelImpostazioni" layoutX="28.0" layoutY="19.0" prefHeight="35.0" prefWidth="438.0" text="Impostazioni" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelRipristina" layoutX="10.0" layoutY="330.0" prefHeight="35.0" prefWidth="411.0" text="Ripristina dati" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="ripristinaButton" defaultButton="true" layoutX="552.0" layoutY="346.0" mnemonicParsing="false" onAction="#ripristina" styleClass="secondaryButton" text="Ripristina" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="346.0" />
+      <Text fx:id="txtRipristina" layoutX="25.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Rimuovi tutti i dati presenti" wrappingWidth="618.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="checkNotifica" layoutX="622.0" layoutY="450.0" mnemonicParsing="false" onAction="#attivaNotifica" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="450.0" />
+      <Label fx:id="labelNotifica" layoutX="18.0" layoutY="394.0" prefHeight="35.0" prefWidth="411.0" text="Notifica giornaliera" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="400.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtNotifica" layoutX="33.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Permette di attiva o disattivare la notifica giornaliera.*" wrappingWidth="618.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="450.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtBasso" layoutX="10.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text=" *(notifica che appare al primo avvio nella dashboard)" wrappingWidth="618.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="labelCambia" layoutX="10.0" layoutY="495.0" prefHeight="35.0" prefWidth="411.0" text="Cambia password" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="500.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="cambiaButton" defaultButton="true" layoutX="553.0" layoutY="535.0" mnemonicParsing="false" onAction="#cambiaPassword" styleClass="secondaryButton" text="Cambia" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="535.0" />
+      <PasswordField fx:id="passwordField" layoutX="371.0" layoutY="534.0" prefHeight="25.0" prefWidth="142.0" promptText="password" styleClass="loginField" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="534.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
