@@ -49,16 +49,12 @@ public class HomeController {
 
     @FXML
     void initialize() throws IOException {
-        // Configura i temi
         impostaTemi();
 
-        // Configura il logo
         initializeLogo();
 
-        // Configura pulsanti della sidebar
         configureSidebarButtons();
 
-        // Configura la sezione di benvenuto
         configureWelcomeSection();
     }
 
@@ -88,10 +84,10 @@ public class HomeController {
         impostazioni.getStyleClass().add("sidebar-button");
         logout.getStyleClass().add("sidebar-logout-button");
 
-        // Aggiungi pulsanti alla VBox
+
         vbox.getChildren().addAll(dashboard, appuntamenti, statistiche, servizi, clienti, dipendenti, impostazioni, logout);
 
-        // Configura le azioni per i pulsanti
+
         clickButtonAction(dashboard, appuntamenti, statistiche, servizi, clienti, dipendenti, impostazioni, logout);
     }
 
@@ -109,7 +105,7 @@ public class HomeController {
     @FXML
     private void goToBookingPage(ActionEvent event) {
         try {
-            // Cerca il pulsante "Appuntamenti" nella VBox
+
             CustomButton appuntamentiButton = null;
             for (javafx.scene.Node node : vbox.getChildren()) {
                 if (node instanceof CustomButton) {
@@ -127,7 +123,6 @@ public class HomeController {
                 System.out.println("Errore: Pulsante 'Appuntamenti' non trovato.");
             }
 
-            // Carica la vista "Appuntamenti"
             avviaPane("fxml/Appuntamenti");
         } catch (IOException e) {
             e.printStackTrace();
@@ -135,7 +130,6 @@ public class HomeController {
     }
 
     private void impostaTemi() throws IOException {
-        // Configura i temi personalizzati, se necessario
     }
 
     private void clickButtonAction(CustomButton... buttons) {
@@ -146,7 +140,7 @@ public class HomeController {
                     return;
                 }
                 try {
-                    setActiveButton(btn); // Evidenzia il pulsante selezionato
+                    setActiveButton(btn);
                     avviaPane("fxml/" + btn.getButtonText().trim());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -176,10 +170,10 @@ public class HomeController {
         if (activeButton == button) return;
 
         if (activeButton != null) {
-            activeButton.getStyleClass().remove("active-button"); // Rimuove lo stile dal pulsante attivo precedente
+            activeButton.getStyleClass().remove("active-button");
         }
 
-        button.getStyleClass().add("active-button"); // Aggiunge lo stile al nuovo pulsante attivo
-        activeButton = button; // Aggiorna il pulsante attivo
+        button.getStyleClass().add("active-button");
+        activeButton = button;
     }
 }
