@@ -16,19 +16,13 @@ public class GestoreDB {
     private Connection con = null;
 
 
-
     public enum entità  {Dipendenti, Clienti, Appuntamenti, Servizi, Template};
-
-
 
     public entità getDipendenti(){ return entità.Dipendenti;}
     public entità getClienti(){ return entità.Clienti;}
     public entità getAppuntamenti(){ return entità.Appuntamenti;}
     public entità getServizi(){ return entità.Servizi;}
     public entità getTemplate(){ return entità.Template;}
-
-
-
 
 
     public void createConnection() throws SQLException {
