@@ -126,6 +126,6 @@ public class DashboardController {
 
     @FXML
     private void avviaNotifica(MouseEvent event) {
-        // Logica dell'evento
+
     }
 }

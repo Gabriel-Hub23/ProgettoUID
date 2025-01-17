@@ -148,7 +148,7 @@ public class SceneHandler {
             default -> {
                 LOGGER.severe("Tema non valido: " + tema);
                 exit(11);
-                yield Settings.themes[0]; // This line will never be reached
+                yield Settings.themes[0];
             }
         };
 
@@ -183,7 +183,7 @@ public class SceneHandler {
 
         String tema = MyInfo.getInstance().getTema();
         if (tema == null) {
-            tema = "DARK"; // Default theme if null
+            tema = "DARK";
         }
 
         String pathTheme = switch (tema) {

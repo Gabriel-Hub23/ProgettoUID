@@ -20,17 +20,6 @@ public class MyTransition {
 
 
     public SequentialTransition fadeInOBJ() {
-/*
-        ParallelTransition parallelTransition = new ParallelTransition();
-        parallelTransition.getChildren().addAll(
-                fadeTransition,
-                translateTransition,
-                rotateTransition,
-                scaleTransition
-        );
-        parallelTransition.setCycleCount(Timeline.INDEFINITE);
-        parallelTransition.play();
-        */
 
         FadeTransition fadeIn = new FadeTransition(Duration.millis(2500));
         fadeIn.setFromValue(0);

@@ -92,11 +92,11 @@ public class HomeController {
     }
 
     private void configureWelcomeSection() {
-        // Configura il messaggio di benvenuto
-        welcomeLabel.setText("Benvenuto al Tattoo P&P!");
+
+        welcomeLabel.setText("Benvenuto al Tattoo-Piercing P&P!");
         welcomeLabel.setStyle("-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: white;");
 
-        // Configura il pulsante "Prenota Ora"
+
         bookNowButton.setText("Prenota Ora");
         bookNowButton.setStyle("-fx-background-color: #b303cd; -fx-text-fill: white; -fx-font-size: 20px;");
         bookNowButton.setOnAction(this::goToBookingPage);
@@ -118,7 +118,7 @@ public class HomeController {
             }
 
             if (appuntamentiButton != null) {
-                setActiveButton(appuntamentiButton); // Evidenzia il pulsante "Appuntamenti"
+                setActiveButton(appuntamentiButton);
             } else {
                 System.out.println("Errore: Pulsante 'Appuntamenti' non trovato.");
             }

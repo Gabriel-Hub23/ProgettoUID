@@ -28,7 +28,7 @@ public class StatisticheController{
     @FXML
     private BarChart<String, Number> chartSettimanale;
 
-    // inserisce all'interno dei chart i dati
+
 
     private void appuntamenti(String p,StringBuilder mese, StringBuilder anno) throws SQLException {
         XYChart.Series<String, Number> appuntamenti = new XYChart.Series<String, Number>();

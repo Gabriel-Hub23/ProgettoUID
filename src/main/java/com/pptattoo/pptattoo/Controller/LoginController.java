@@ -49,28 +49,27 @@ public class LoginController {
         ImageView eyeIcon;
 
         if (isPasswordVisible) {
-            // Nascondi la password
+
             passwordField.setText(textPasswordField.getText());
             textPasswordField.setVisible(false);
             textPasswordField.setManaged(false);
             passwordField.setVisible(true);
             passwordField.setManaged(true);
 
-            // Cambia l'icona in occhio aperto
+
             eyeIcon = new ImageView(new Image(getClass().getResource("/com/pptattoo/pptattoo/img/eye.png").toExternalForm()));
         } else {
-            // Mostra la password
+
             textPasswordField.setText(passwordField.getText());
             passwordField.setVisible(false);
             passwordField.setManaged(false);
             textPasswordField.setVisible(true);
             textPasswordField.setManaged(true);
 
-            // Cambia l'icona in occhio chiuso
+
             eyeIcon = new ImageView(new Image(getClass().getResource("/com/pptattoo/pptattoo/img/eye-closed.png").toExternalForm()));
         }
 
-        // Imposta dimensioni uniformi per l'immagine
         eyeIcon.setFitWidth(16);
         eyeIcon.setFitHeight(16);
         togglePasswordButton.setGraphic(eyeIcon);

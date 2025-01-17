@@ -22,7 +22,7 @@ public class CustomButton extends Button {
     private Node parent;
     private int buttonWidth;
 
-    // Solo immagine
+
     public CustomButton(String buttonText, String imagePath, String... buttonDescription) {
         super();
         this.buttonText = buttonText;
@@ -32,7 +32,7 @@ public class CustomButton extends Button {
         setButtonImageOnly();
     }
 
-    // Basato sulla grandezza del nodo padre
+
     public CustomButton(Node parent, int buttonWidth, String buttonText, String imagePath, String... buttonDescription) {
         super();
         this.parent = parent;
@@ -48,7 +48,7 @@ public class CustomButton extends Button {
         setImageInButton();
         this.setAlignment(Pos.BASELINE_LEFT);
 
-        // Sempre mostra il testo
+
         this.setText(buttonText);
         this.setPrefWidth(buttonWidth);
         this.setPadding(new Insets(
@@ -58,7 +58,7 @@ public class CustomButton extends Button {
                 10
         ));
 
-        setButtonDescription(); // Imposta la descrizione del pulsante
+        setButtonDescription();
     }
 
     private void setButtonImageOnly() {
@@ -92,6 +92,6 @@ public class CustomButton extends Button {
     }
 
     public String getButtonText() {
-        return buttonText.trim(); // Rimuove eventuali spazi
+        return buttonText.trim();
     }
 }

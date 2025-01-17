@@ -15,11 +15,11 @@ public class GestoreDB {
 
     private Connection con = null;
 
-    //le entità che sono presenti nel db
+
 
     public enum entità  {Dipendenti, Clienti, Appuntamenti, Servizi, Template};
 
-    //getters delle entità
+
 
     public entità getDipendenti(){ return entità.Dipendenti;}
     public entità getClienti(){ return entità.Clienti;}
@@ -27,9 +27,9 @@ public class GestoreDB {
     public entità getServizi(){ return entità.Servizi;}
     public entità getTemplate(){ return entità.Template;}
 
-    // leggi entità prende tutto dell'entità indicata, senza nessun vincolo
 
-    //crea la connessione al db
+
+
 
     public void createConnection() throws SQLException {
         File file = new File("src/main/resources/com/pptattoo/pptattoo/db/progetto.db");
@@ -37,7 +37,6 @@ public class GestoreDB {
         con = DriverManager.getConnection(url);
     }
 
-    //chiude la connessione
 
     public void closeConnection() throws SQLException {
         if(con != null)
@@ -84,7 +83,7 @@ public class GestoreDB {
         return risultato;
     }
 
-    // Inserisce nel db, una tupla dell'entità indicata
+
 
     public void inserimento(entità ent, String [] info) throws SQLException {
         switch (ent){
@@ -128,7 +127,7 @@ public class GestoreDB {
         }
     }
 
-    // aggiorna la tupla indicata
+
 
     public void aggiornamento(entità ent, String [] info) throws SQLException {
         switch (ent){
@@ -210,7 +209,7 @@ public class GestoreDB {
         }
     }
 
-    //cerca in base la singola tupla ponendo l'id o il cf uguali alla chiave, andando a selezionare il singolo parametro. si possono generare anche singole tuple con tutti i parametri
+
 
     public String selezionaValore (entità ent, String parametro, String chiave) throws SQLException {
         String query;
@@ -293,7 +292,7 @@ public class GestoreDB {
         return s.toString();
     }
 
-    //conta il numero di Appuntamenti in una certa data e i numeri di dipendenti totali, la prima viene usata per le statistiche, la seconda per generare lo username di base
+
 
     public int conta(String data, int scelta) throws SQLException {
         String sql = "";
@@ -345,7 +344,7 @@ public class GestoreDB {
         return s;
     }
 
-    // crea la lista che viene aggiunta alla tabella degli appuntamenti, sia quella di ricerca che quella senza ricerca
+
 
     public ArrayList<String> creaLista(boolean cerca, String filtro, String valore) throws SQLException {
         ArrayList<String> risultato = new ArrayList<String>();
@@ -370,7 +369,7 @@ public class GestoreDB {
         return risultato;
     }
 
-    // permette di effettuare il login
+
 
     public boolean login(String username, String password) throws SQLException {
         String sql = "Select * From Dipendenti Where Username LIKE ? and Ruolo LIKE 'Proprietario' or Ruolo LIKE 'Manager';";

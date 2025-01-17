@@ -31,14 +31,14 @@ public class WelcomePageController {
     @FXML
     private StackPane stackPane;
 
-    // Aggiunto controllo null per evitare problemi
+
     private SequentialTransition imgTransition;
     private ImageView imageView = new ImageView();
     private List<Image> images = new LinkedList<>();
 
     private Stage stage;
 
-    // Metodo per fermare la transizione
+
     @FXML
     void actionContinueButton() {
         if (imgTransition != null && imgTransition.getStatus() == Animation.Status.RUNNING) {
@@ -47,7 +47,7 @@ public class WelcomePageController {
         SceneHandler.getInstance().launchLogin();
     }
 
-    // Metodo per inizializzare la scena
+
     public void initialize() {
         continueButton.setDisable(true);
         labelTitle.setText(Settings.INIT_TITLE);
@@ -58,7 +58,7 @@ public class WelcomePageController {
         configContinueButton();
     }
 
-    // Configura lo StackPane
+
     private void configStackPane() {
         Platform.runLater(() -> setLayoutStackPane());
 
@@ -66,7 +66,7 @@ public class WelcomePageController {
         stackPane.setAlignment(Pos.CENTER);
     }
 
-    // Calcola la posizione dello StackPane
+
     private void setLayoutStackPane() {
         double width = stackPane.getWidth();
         double height = stackPane.getHeight();
@@ -75,14 +75,14 @@ public class WelcomePageController {
         stackPane.resizeRelocate(x, y, width, height);
     }
 
-    // Configura le dimensioni del pulsante "Continue"
+
     private void configContinueButton() {
         continueButton.setText("Start");
         continueButton.prefWidthProperty().bind(stackPane.widthProperty().divide(3).multiply(2.5));
         continueButton.prefHeightProperty().bind(stackPane.heightProperty().divide(5).multiply(0.3));
     }
 
-    // Inizializza le immagini e la transizione
+
     private void setImages() {
         int N_IMAGES = 8;
 
@@ -109,10 +109,10 @@ public class WelcomePageController {
         imgTransition.setCycleCount(SequentialTransition.INDEFINITE);
         imgTransition.play();
 
-        continueButton.setDisable(false); // Abilita il pulsante solo dopo che tutto è pronto
+        continueButton.setDisable(false);
     }
 
-    // Calcola la posizione e le dimensioni dell'immagine
+
     private void setLayoutImageView() {
         imageView.setFitWidth(stackPane.getWidth());
         imageView.setFitHeight(210);
@@ -121,11 +121,11 @@ public class WelcomePageController {
         imageView.setLayoutX((stackPane.getWidth() - imageView.getFitWidth()) / 2);
         imageView.setLayoutY(0);
 
-        // Aggiungi l'immagine allo StackPane se non presente
+
         if (!stackPane.getChildren().contains(imageView)) {
             stackPane.getChildren().add(imageView);
         }
 
-        System.out.println("Image width: " + imageView.getFitWidth() + ", height: " + imageView.getFitHeight());  // Log per verificare dimensioni
+        System.out.println("Image width: " + imageView.getFitWidth() + ", height: " + imageView.getFitHeight());
     }
 }

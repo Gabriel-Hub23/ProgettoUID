@@ -42,11 +42,11 @@ public class Card extends AnchorPane {
 
     private void setLayout() {
 
-        // Variabili per identificare il tipo di oggetto
+
         String identifier = null;
         String imagePath = null;
         Dialog.from from = null;
-        //-----------------------------------------
+
 
         LinkedList<Label> labelsKey = new LinkedList<>();
         LinkedList<Label> labelsValue = new LinkedList<>();
@@ -75,18 +75,18 @@ public class Card extends AnchorPane {
                 imagePath = IMAGE_USER;
             }
 
-            // Verifica se l'immagine esiste
+
             try {
                 if (Main.class.getResourceAsStream(imagePath) == null) {
                     throw new Exception("Immagine non trovata");
                 }
             } catch (Exception e) {
-                imagePath = IMAGE_USER; // Fallback all'immagine di default se l'immagine specifica non esiste
+                imagePath = IMAGE_USER;
             }
 
             from = Dialog.from.DIPENDENTI;
 
-            // Crea le righe di informazioni del dipendente
+
             createLabelsLines(groups, "ID:", dip.getId());
             createLabelsLines(groups, "Dipendente:", dip.getName() + " " + dip.getLastName());
             createLabelsLines(groups, "Ruolo:", dip.getRole());
@@ -100,7 +100,7 @@ public class Card extends AnchorPane {
             Servizio serv = (Servizio) obj;
             identifier = serv.getId();
 
-            // Seleziona immagine basata sul tipo di servizio
+
             switch (serv.getTipo().toLowerCase()) {
                 case "tatuaggio realistico":
                     imagePath = "img/Tattoo-Piercing8.png";
@@ -127,7 +127,7 @@ public class Card extends AnchorPane {
                     imagePath = "img/Tattoo-Piercing10.png";
                     break;
                 default:
-                    imagePath = IMAGE_SERVIZI; // Immagine di default
+                    imagePath = IMAGE_SERVIZI;
                     break;
             }
 
@@ -154,7 +154,7 @@ public class Card extends AnchorPane {
             return;
         }
 
-        // ------------------- NON TOCCARE SOTTO --------------------
+
 
         CustomButton edit = new CustomButton("Modifica","img/edit.png", "Modifica i dati della scheda selezionata");
         edit.getStyleClass().add("thirdButton");
@@ -165,6 +165,7 @@ public class Card extends AnchorPane {
         edit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                System.out.println(parent.getParent().getParent().getParent().getParent().idProperty());
                 Dialog.getInstance().requestDialog(
                         finalFrom,
                         Dialog.actions.MODIFICA,

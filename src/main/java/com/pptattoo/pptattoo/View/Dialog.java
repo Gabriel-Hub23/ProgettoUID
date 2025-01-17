@@ -465,12 +465,12 @@ public class Dialog {
     }
 
 
-    //prende come parametro l'attuale ancorPane della view
-    public Optional<DialogResponse> requestDialog(from fromView, actions exeAction, String id, AnchorPane anchorPane)  { //prende come parametri i nomi in minuscolo delle singole opzioni da richedere all'utente
+
+    public Optional<DialogResponse> requestDialog(from fromView, actions exeAction, String id, AnchorPane anchorPane)  {
 
         if (anchorPaneFather == null || anchorPane == null) {
             SceneHandler.getInstance().generaAlert("Errore Generale. Prova di nuovo", false);
-            return null;    //se null, non è stato possibile effettuare la richiesta
+            return null;
         }
 
         Pane rightHomePane = (Pane) anchorPane.getParent();

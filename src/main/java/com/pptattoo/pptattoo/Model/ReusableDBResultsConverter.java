@@ -111,18 +111,12 @@ public class ReusableDBResultsConverter {
             String[] rowValues = i.split(";");
 
 
-            /*if (rowValues.length < Settings.Cell_DB_APPUNTAMENTI) {
-                System.out.println("celle clienti < celle attese");
-                continue;
-            }
-             */
-
             notAvailable(rowValues);
 
 
             try {
                 // 0   1    2   3    4
-                // id data cf iddip idser
+                // id data cf idip idser
                 Appuntamento app = new Appuntamento(
                         Integer.parseInt(rowValues[0]),
                         rowValues[2],

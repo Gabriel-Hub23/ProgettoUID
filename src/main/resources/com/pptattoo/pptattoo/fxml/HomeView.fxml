@@ -14,28 +14,28 @@
             prefWidth="950.0"
             styleClass="external-pane">
 
-   <!-- Barra laterale con il logo e i pulsanti -->
+
    <VBox fx:id="vbox" alignment="CENTER_LEFT" layoutX="19.0" layoutY="186.0"
          prefHeight="321.0" prefWidth="189.0" spacing="10.0"
          AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="100.0">
-      <!-- Qui eventualmente inserisci i pulsanti CustomButton (Dashboard, Appuntamenti, ecc.) -->
+
       <AnchorPane fx:id="anchorPaneImageView">
          <ImageView fx:id="logoView" fitHeight="140.0" fitWidth="137.0" preserveRatio="true" />
       </AnchorPane>
    </VBox>
 
-   <!-- Area principale in cui caricare le diverse viste (Appuntamenti, ecc.) -->
+
    <Pane fx:id="viewPane" layoutX="209.0" layoutY="14.0"
          prefHeight="680.0" prefWidth="731.0" styleClass="primary-app-view"
          AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="183.0"
          AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
 
-      <!-- Messaggio di benvenuto -->
+
       <Label fx:id="welcomeLabel" layoutX="30.0" layoutY="30.0"
              style="-fx-font-size: 24px; -fx-text-fill: #ffffff; -fx-font-weight: bold;"
-             text="Benvenuto al Tattoo P&amp;P!" />
+             text="Benvenuto al Tattoo-Piercing P&amp;P!" />
 
-      <!-- Pulsante Prenota Ora -->
+
       <Button fx:id="bookNowButton"
               layoutX="30.0" layoutY="80.0"
               text="Prenota Ora"

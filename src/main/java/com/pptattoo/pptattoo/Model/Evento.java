@@ -15,7 +15,7 @@ public class Evento {
     }
 
     private String randomColor() {
-        return new String(); // random hex
+        return new String();
     }
 
     public String getColor() { return color; }
@@ -25,16 +25,16 @@ public class Evento {
 
     public void setColor(String color) {
         this.color = color;
-        //aggiornamento su db
+
     }
 
     public void setEventName(String eventName) {
         this.eventName = eventName;
-        //aggiornamento su db
+
     }
 
     public void setDuration(int duration) {
         this.duration = duration;
-        //aggiornamento su db
+
     }
 }

@@ -27,8 +27,7 @@ import java.util.ArrayList;
 public class AppuntamentiController {
 
     @FXML
-    private AnchorPane ancorPane; // Pannello principale
-
+    private AnchorPane ancorPane;
     @FXML
     private HBox scontrino_hbox, search_hbox;
 
@@ -47,7 +46,6 @@ public class AppuntamentiController {
     @FXML
     private TableView<Appuntamento> table;
 
-    // Colonne della TableView
     @FXML
     private TableColumn<Appuntamento, Integer> colonnaId;
     @FXML
@@ -65,10 +63,7 @@ public class AppuntamentiController {
     @FXML
     private TableColumn<Appuntamento, Double> colonnaPrezzo;
 
-    /**
-     * Inizializza la vista degli Appuntamenti.
-     * Viene chiamato automaticamente quando la view viene caricata.
-     */
+
     @FXML
     public void initialize() throws IOException {
         impostaTemi();
@@ -76,9 +71,7 @@ public class AppuntamentiController {
         popolaTabella();
     }
 
-    /**
-     * Configura le colonne della tabella per associare i dati della classe Appuntamento.
-     */
+
     private void setCellValue() {
         colonnaId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colonnaEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -90,9 +83,7 @@ public class AppuntamentiController {
         colonnaServizio.setCellValueFactory(new PropertyValueFactory<>("servizio"));
     }
 
-    /**
-     * Popola la tableView con la lista di appuntamenti dal database.
-     */
+
     private void popolaTabella() {
         table.getItems().clear();
         try {
@@ -105,9 +96,7 @@ public class AppuntamentiController {
         }
     }
 
-    /**
-     * Aggiunge gli elementi di filtro nel ComboBox.
-     */
+
     private void aggiungiItems() {
         filtroBox.getItems().addAll(
                 "Id",
@@ -122,9 +111,7 @@ public class AppuntamentiController {
         );
     }
 
-    /**
-     * Configura il font e lo stile secondo le impostazioni salvate (Dyslexie/Quicksand).
-     */
+
     private void impostaTemi() throws IOException {
         if (MyInfo.getInstance().getFont().equals("Dyslexie")) {
             labelAppuntamenti.setFont(Font.loadFont(MyInfo.getInstance().getFontDyslexia(), MyInfo.getInstance().getSizeLabel()));
@@ -138,24 +125,17 @@ public class AppuntamentiController {
             editButton.setFont(Font.loadFont(MyInfo.getInstance().getFontDyslexia(), editButton.getFont().getSize() - 1));
         } else {
             labelAppuntamenti.setFont(Font.font(MyInfo.getInstance().getFontQuicksand(), MyInfo.getInstance().getSizeLabel()));
-            // Puoi fare lo stesso per gli altri campi o lasciare i font di default
+
         }
     }
 
-    // ================================ AZIONI BOTTONI ================================
 
-    /**
-     * Aggiunge un nuovo appuntamento.
-     * Viene aperta una finestra di dialogo personalizzata.
-     */
     @FXML
     void aggiungiAppuntamento(ActionEvent event) throws IOException {
         Dialog.getInstance().requestDialog(Dialog.from.APPUNTAMENTI, Dialog.actions.AGGIUNGI, "-1", ancorPane);
     }
 
-    /**
-     * Modifica un appuntamento esistente, cercando l'ID inserito.
-     */
+
     @FXML
     void modificaAppuntamento(ActionEvent event) throws IOException {
         if (!idField.getText().isEmpty()) {
@@ -171,9 +151,7 @@ public class AppuntamentiController {
         }
     }
 
-    /**
-     * Rimuove un appuntamento esistente, cercando l'ID inserito.
-     */
+
     @FXML
     void rimuoviAppuntamento(ActionEvent event) throws IOException {
         if (!idField.getText().isEmpty()) {
@@ -188,13 +166,10 @@ public class AppuntamentiController {
         } else {
             SceneHandler.getInstance().generaAlert("Non hai inserito l'id per modificare", false);
         }
-        // Ricarica la tabella
+
         popolaTabella();
     }
 
-    /**
-     * Genera uno scontrino per l'appuntamento indicato.
-     */
     @FXML
     void generaScontrino(ActionEvent event) throws DocumentException, FileNotFoundException, SQLException {
         if (idScontrino.getText().isEmpty()) {
@@ -205,17 +180,14 @@ public class AppuntamentiController {
                     .toString().equals(idScontrino.getText())) {
                 SceneHandler.getInstance().generaAlert("L'id inserito non esiste.", false);
             } else {
-                // Presumo tu abbia una classe "GeneraScontrino" che crea il PDF o simili
-                // GeneraScontrino.getInstance().generaScontrino(idScontrino.getText());
+
             }
         }
         idScontrino.clear();
         idScontrino.setPromptText("Id");
     }
 
-    /**
-     * Cerca appuntamenti in base a un filtro e un valore.
-     */
+
     @FXML
     void cerca(ActionEvent event) throws SQLException {
         if (filtroBox.getValue() == null) {

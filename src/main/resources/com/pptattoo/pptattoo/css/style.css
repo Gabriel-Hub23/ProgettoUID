@@ -50,26 +50,26 @@
 
 /* Dashboard */
 .dashboard-section {
-    -fx-background-color: #43004a; /* Verde brillante */
+    -fx-background-color: #43004a;
     -fx-border-radius: 10px;
     -fx-padding: 10px;
-    -fx-text-fill: #FFFFFF; /* Testo bianco */
+    -fx-text-fill: #FFFFFF;
 }
 
 .dashboard-section:hover {
-    -fx-background-color: #43004a; /* Verde scuro al passaggio */
+    -fx-background-color: #43004a;
 }
 
-/* Statistiche */
+
 .statistics-section {
-    -fx-background-color: #43004a; /* Verde brillante */
+    -fx-background-color: #43004a;
     -fx-border-radius: 10px;
     -fx-padding: 10px;
-    -fx-text-fill: #FFFFFF; /* Testo bianco */
+    -fx-text-fill: #FFFFFF;
 }
 
 .statistics-section:hover {
-    -fx-background-color: #43004a; /* Verde scuro al passaggio */
+    -fx-background-color: #43004a;
 }
 
 .loginField,
@@ -177,33 +177,33 @@
 
 .chart-legend {
     -fx-background-color: transparent;
-    -fx-text-fill: #FFFFFF; /* Testo bianco per la legenda */
+    -fx-text-fill: #FFFFFF;
 }
 
 .chart-bar {
-    -fx-bar-fill: #43004a; /* Verde per le barre */
+    -fx-bar-fill: #43004a;
 }
 
 .chart-series-line {
-    -fx-stroke: #43004a; /* Verde per le linee */
-    -fx-background-color: #43004a; /* Colore dei punti */
+    -fx-stroke: #43004a;
+    -fx-background-color: #43004a;
 }
 
 .chart-legend-item-symbol {
-    -fx-background-color: #b303cd; /* Verde per i simboli nella legenda */
+    -fx-background-color: #b303cd;
 }
 
 .axis {
-    -fx-tick-label-fill: #FFFFFF; /* Testo bianco per i numeri delle assi */
-    -fx-label-fill: #FFFFFF; /* Testo bianco per i nomi delle assi */
+    -fx-tick-label-fill: #FFFFFF;
+    -fx-label-fill: #FFFFFF;
 }
 
 .axis-line {
-    -fx-stroke: #AAAAAA; /* Grigio chiaro per le linee delle assi */
+    -fx-stroke: #AAAAAA;
 }
 
 .chart-grid-lines {
-    -fx-stroke: #555555; /* Grigio scuro per le linee di griglia */
+    -fx-stroke: #555555;
 }
 
 .bar-chart .chart-content .chart-plot-background {
@@ -407,17 +407,21 @@
 
 
 
-
-/* Stile per il pulsante attivo */
 .active-button {
-    -fx-background-color: #6c0073; /* Colore evidenziato */
-    -fx-text-fill: white; /* Testo bianco */
-    -fx-font-weight: bold; /* Testo in grassetto */
-    -fx-border-color: white; /* Bordo bianco */
-    -fx-border-width: 2px; /* Spessore del bordo */
-    -fx-border-radius: 5px; /* Bordo arrotondato */
-    -fx-background-radius: 5px; /* Sfondo arrotondato */
+    -fx-background-color: #6c0073;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
 
 
 
+
+
+.rimuoviButton {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}

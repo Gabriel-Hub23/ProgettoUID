@@ -9,7 +9,7 @@ Funzioni:
   - registrare i dipendenti
   - creare dei servizi
 
-Perché scegliere Tattoo P&P?
+Perché scegliere Tattoo-Piercing P&P?
 
 Perché siamo i migliori.
 Perché facciamo tutto facile, come quando hai il cliente perfetto che non si muove!

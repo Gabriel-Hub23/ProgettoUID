@@ -69,7 +69,7 @@ public class ImpostazioniController {
     @FXML
     private Text txtBasso;
 
-    // Funzione che imposta i tutti i dettagli dei font scelti: Tema, Font e Size(quest'ultima non è modificabile all'utente)
+
     private void impostaFont() throws IOException {
         if(MyInfo.getInstance().getFont().equals("Dyslexie")){
             labelImpostazioni.setFont(Font.loadFont(MyInfo.getInstance().getFontDyslexia(),MyInfo.getInstance().getSizeLabel()-1));
@@ -104,7 +104,7 @@ public class ImpostazioniController {
         }
     }
 
-    // É la funzione che imposta il tema dei testi e bottoni, ogni volta aggiorna anche i dati nel DB
+
     @FXML
     void scegliTema(ActionEvent event) throws SQLException, IOException {
         if (temiComboBox.getSelectionModel().isSelected(0)){
@@ -131,7 +131,7 @@ public class ImpostazioniController {
         passwordField.setPromptText("Nuova password");
     }
 
-    // Funzione che attiva il font in base alla check box
+
     @FXML
     void attivaDislessia(ActionEvent event) throws SQLException, IOException {
         MyInfo.getInstance().setFont(checkDislessia.isSelected());
@@ -162,7 +162,7 @@ public class ImpostazioniController {
         }
     }
 
-    //Initialize, vengono inserite tutte le cose all'inizio
+
     @FXML
     public void initialize() throws IOException {
         if(MyInfo.getInstance().getFont().equals("Dyslexie")){
