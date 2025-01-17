@@ -152,7 +152,7 @@ public class GestoreDB {
                 } catch (SQLException e) {}
             }
             case Appuntamenti -> {
-                try (PreparedStatement pstmt = con.prepareStatement("UPDATE Appuntamenti SET Data LIKE ?, CF_Cliente = ?, Id_Dipendente = ?, Id_Servizio = ? WHERE Id = ?;")) {
+                try (PreparedStatement pstmt = con.prepareStatement("UPDATE Appuntamenti SET Data = ?, CF_Cliente = ?, Id_Dipendente = ?, Id_Servizio = ? WHERE Id=?;")){
                     pstmt.setString(1, info[0]); //Data
                     pstmt.setString(2, info[1]); // CF_Cliente
                     pstmt.setInt(3, Integer.parseInt(info[2])); // Id_Dipendente
